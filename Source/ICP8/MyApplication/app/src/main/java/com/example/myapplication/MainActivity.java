@@ -13,12 +13,10 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    //initialize variables
     private EditText UserName;
     private EditText Password;
     private Button btn;
 
-    //username and password login
     private String Username = "user";
     private String password = "1234";
 
@@ -41,7 +39,6 @@ public class MainActivity extends AppCompatActivity {
                 String inputName = UserName.getText().toString();
                 String inputPassword = Password.getText().toString();
 
-                //Error if user put in wrong information
                 if( inputName.isEmpty() || inputPassword.isEmpty()){
                     Toast.makeText(MainActivity.this, "Incorrect Username or Password", Toast.LENGTH_SHORT).show();
                 }else{
@@ -59,10 +56,8 @@ public class MainActivity extends AppCompatActivity {
                         }
                     }else{
 
-                        //to confirm that the login was successful
                         Toast.makeText(MainActivity.this, "Login Successful",Toast.LENGTH_SHORT).show();
 
-                        //redirect to another class
                         Intent intent = new Intent (MainActivity.this, Welcome.class);
                         startActivity(intent);
                     }
@@ -75,7 +70,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    //indicate if the login was successful or not
     private boolean validate(String name, String pass){
         if(name.equals(Username)&& pass.equals(password)){
             return true;

@@ -26,7 +26,6 @@ public class Welcome extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                //when clicked on button, it will redirect back to login page
                 Toast.makeText(Welcome.this, "Back to Login", Toast.LENGTH_SHORT).show();
 
                 Intent intent = new Intent(Welcome.this, MainActivity.class);
